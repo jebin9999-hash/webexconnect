@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting Summit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            margin: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .support-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid #e9ecef;
+        }
+
+        .support-title {
+            font-size: 1.5rem;
+            color: #495057;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .support-description {
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .chat-embed-area {
+            min-height: 100px;
+            border: 2px dashed #dee2e6;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #adb5bd;
+            font-style: italic;
+            background: #ffffff;
+            position: relative;
+            padding: 1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .feature {
+            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e9ecef;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Troubleshooting Summit</h1>
+        <p class="subtitle">Get expert help when you need it most</p>
+        
+        <div class="support-section">
+            <h2 class="support-title">Need Help? Chat with Our Agents</h2>
+            <p class="support-description">
+                Connect instantly with our technical support team for personalized assistance
+            </p>
+            
+            <!-- Chat Widget Integration -->
+            <div class="chat-embed-area">
+                <div id="divicw" data-bind="1BFA7BD1-B86B-4F09-A696-5C2A4DEBED2F" data-org=""></div>
+                <p style="color: #6c757d; margin-top: 1rem; font-size: 0.9rem;">
+                    Chat widget will load here. If you don't see it, please refresh the page or check your browser settings.
+                </p>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>🚀 Quick Response</h3>
+                <p>Get answers in minutes, not hours</p>
+            </div>
+            <div class="feature">
+                <h3>🎯 Expert Support</h3>
+                <p>Trained agents ready to solve your issues</p>
+            </div>
+            <div class="feature">
+                <h3>💬 Real-time Chat</h3>
+                <p>Interactive support whenever you need it</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Troubleshooting Summit. Your support solution.</p>
+        </div>
+    </div>
+
+    <script>
+        // IMI Chat Widget Integration with DOM ready check
+        var i={t:function(t){var e="https://attachuk.imi.chat/widget/js/imichatinit.js";try{var o=new XMLHttpRequest;o.onreadystatechange=function(){if(this.readyState==4){var t=document.getElementById("divicw");if(!t){console.error("Chat widget container not found");return}if(this.status==0){i.o(t);return}var e=document.createElement("script");e.innerHTML=this.responseText;t.parentNode.insertBefore(e,t.nextSibling)}};o.open("GET",e,true);o.send()}catch(s){console.error("Chat widget error:",s)}},o:function(t){if(!t){console.error("Chat widget element is null");return}t.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow: hidden;height: 208px;width: 394px;position: fixed;display: block;right: 48px;bottom: 12px;z-index: 99999; display:none;"></iframe>');var e=document.getElementById("tls_al_frm");var o=e.contentWindow||(e.contentDocument.document||e.contentDocument);o.document.open();o.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Untitled Document</title><style>body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #99a0b0;font-size: 14px;}.popover__content{background-color: #fbfbfe; padding: 1.5rem; border-radius: 5px; width: 300px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);position: relative;}.popover__message{font-weight: 600;color:#56627c;font-size: 16px;}.pull-left{float:left;}.clearfix{clear: both;}.hdr-txt{width: 218px; margin-top: 3px;}.para-txt a{text-decoration: none;color: #005cde;}.close-btn{position: absolute;right:15px;top:15px;}.close-btn a{text-decoration: none;font-weight: 400; color: #56627c; font-size: 16px;}</style></head><body><div class="popover__content"><div class="close-btn"><a href="#" onclick="closeTLSAlert();">X</a></div><div class="popover__message"><div class="pull-left hdr-txt">This browser version is not supported on LiveChat.</div></div><div class="clearfix"></div><p class="para-txt">Please update your browser to the latest version and re-open the website to access the widget. </p></div><script>function closeTLSAlert(){window.parent.postMessage({key: "close_tls_alert",value: "close_tls_alert",action: "close_tls_alert"}, "*");}<\/script></body></html>');o.document.close();e.style.display="block";window.addEventListener("message",function(t){if(t.data.action=="close_tls_alert"){i.s()}})},s:function(){var t=document.getElementById("tls_al_frm");if(t){t.remove()}}};
+
+        // Initialize chat widget when DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Troubleshooting Summit page loaded');
+            console.log('Available elements:', document.querySelectorAll('[id]'));
+            
+            // Wait a bit more to ensure all elements are ready
+            setTimeout(function() {
+                var chatContainer = document.getElementById("divicw");
+                console.log('Chat container search result:', chatContainer);
+                
+                if (chatContainer) {
+                    console.log('Chat widget container found, initializing...');
+                    i.t(function(t){});
+                } else {
+                    console.error('Chat widget container "divicw" not found in DOM');
+                    // Try to find it by data-bind attribute as fallback
+                    var fallbackContainer = document.querySelector('[data-bind="1BFA7BD1-B86B-4F09-A696-5C2A4DEBED2F"]');
+                    if (fallbackContainer) {
+                        console.log('Found container by data-bind attribute');
+                        // Temporarily set the id if missing
+                        fallbackContainer.id = 'divicw';
+                        i.t(function(t){});
+                    }
+                }
+            }, 500);
+        });
+
+        // Fallback initialization if DOMContentLoaded already fired
+        if (document.readyState === 'loading') {
+            // DOMContentLoaded has not fired yet
+        } else {
+            // DOMContentLoaded has already fired, initialize immediately
+            setTimeout(function() {
+                var chatContainer = document.getElementById("divicw");
+                if (chatContainer) {
+                    console.log('Chat widget container found (fallback), initializing...');
+                    i.t(function(t){});
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>
